@@ -13,7 +13,7 @@ on [NixOS](https://nixos.org/)
 
 ## Usage
 
-- run `qctoolgui` for the shell
+- run `qctoolgui` from the shell
 
 ## Details
 - `shell.nix` will create a shell with python 3.8 and DataQualityControlTool
