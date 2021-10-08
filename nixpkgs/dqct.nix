@@ -20,7 +20,10 @@ buildPythonPackage rec {
   pname = "dqct";
   version = "3.0";
 
+  doCheck = false;
+
   src = ../.;
+
   propagatedBuildInputs = [
     pytest
     pandas
