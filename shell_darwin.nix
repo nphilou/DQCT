@@ -1,4 +1,5 @@
 with import <nixpkgs> {
+  # https://github.com/NixOS/nixpkgs/issues/137678
   overlays =  [
     (self: super:
     let

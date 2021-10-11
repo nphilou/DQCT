@@ -1,21 +1,31 @@
 # DQCT
 
 This repo will contain files and instructions to install the [HBP-MIP Data Quality Control Tool](https://github.com/HBPMedical/DataQualityControlTool)
-on [NixOS](https://nixos.org/)
+on [NixOS](https://nixos.org/), MacOS and Ubuntu using Nix package manager
 
 ## Installation
 
-- clone the repo of the tool (https://github.com/HBPMedical/DataQualityControlTool) to your favorite directory
-- clone this repo too
-- copy `.envrc` (if you are using direnv), `shell.nix` and `nixpkgs` folder to `yourFavoriteDirectory/DataQualityControlTool`
-- run `direnv allow` if you are using direnv
-- let NixOS build derivations and run tests for DataQualityControlTool
+### NixOS
+
+- clone this repo
+- install Docker: https://nixos.wiki/wiki/Docker
+- run `nix-shell shell.nix`
+
+### MacOS
+
+- clone this repo
+- install Nix by running `curl -L https://nixos.org/nix/install | sh`
+- install Docker
+- run `nix-shell shell_ubuntu.nix`
+
+### Ubuntu
+
+- clone this repo
+- install Nix by running `curl -L https://nixos.org/nix/install | sh`
+- install Docker
+- run `nix-shell shell_darwin.nix`
+
 
 ## Usage
 
 - run `qctoolgui` from the shell
-
-## Details
-- `shell.nix` will create a shell with python 3.8 and DataQualityControlTool
-- `nixpkgs/dqct.nix` is the DataQualityControlTool nix package file
-- `nixpkgs/tabulator.nix` and `nixpkgs/tableschema.nix` are the corresponding python packages

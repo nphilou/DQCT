@@ -10,6 +10,7 @@
 , nltk
 , openpyxl
 , tkinter
+, fetchFromGitHub
 }:
 
 let
@@ -17,12 +18,17 @@ let
   tableschema = callPackage ./tableschema.nix {};
 in
 buildPythonPackage rec {
-  pname = "dqct";
+  pname = "DataQualityControlTool";
   version = "3.0";
 
   doCheck = false;
 
-  src = ../.;
+  src = fetchFromGitHub {
+    owner = "HBPMedical";
+    repo = pname;
+    rev = "54d29aee2b54e61e94c5f2483961bf95e6977d90";
+    sha256 = "1m0m3w20504w4kic1lxpvlnpanryjldhsy76pg2gpb0k4zcxwzpg";
+  };
 
   propagatedBuildInputs = [
     pytest

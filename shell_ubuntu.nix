@@ -8,6 +8,7 @@ pkgs.mkShell {
         (callPackage ./nixpkgs/dqct.nix {})
       ]
     ))
+    pkgs.docker
     pkgs.libffi
     pkgs.pango
     pkgs.docker-compose
