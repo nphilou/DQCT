@@ -16,15 +16,14 @@ on [NixOS](https://nixos.org/), MacOS and Ubuntu using Nix package manager
 - clone this repo
 - install Nix by running `curl -L https://nixos.org/nix/install | sh`
 - install Docker
-- run `nix-shell shell_ubuntu.nix`
+- run `nix-shell shell_darwin.nix`
 
 ### Ubuntu
 
 - clone this repo
 - install Nix by running `curl -L https://nixos.org/nix/install | sh`
 - install Docker
-- run `nix-shell shell_darwin.nix`
-
+- run `nix-shell shell_ubuntu.nix`
 
 ## Usage
 
